@@ -10,7 +10,7 @@ const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 
-const clickSound = new Audio("/assets/pomodoro/click.mp3");
+const clickSound = new Audio("../assets/pomodoro/click.mp3");
 
 function playClick() {
   clickSound.currentTime = 0;
@@ -22,14 +22,14 @@ document.addEventListener("click", playClick);
 const TOTAL_FRAMES = 8;
 
 const treeFrames = [
-  "/assets/Pomodoro/tree-1.png",
-  "/assets/Pomodoro/tree-2.png",
-  "/assets/Pomodoro/tree-3.png",
-  "/assets/Pomodoro/tree-4.png",
-  "/assets/Pomodoro/tree-5.png",
-  "/assets/Pomodoro/tree-6.png",
-  "/assets/Pomodoro/tree-7.png",
-  "/assets/Pomodoro/tree-8.png",
+  "../assets/Pomodoro/tree-1.png",
+  "../assets/Pomodoro/tree-2.png",
+  "../assets/Pomodoro/tree-3.png",
+  "../assets/Pomodoro/tree-4.png",
+  "../assets/Pomodoro/tree-5.png",
+  "../assets/Pomodoro/tree-6.png",
+  "../assets/Pomodoro/tree-7.png",
+  "../assets/Pomodoro/tree-8.png",
 ];
 
 let totalSeconds = 25 * 60;
@@ -42,7 +42,9 @@ function updateDisplay() {
   const mins = Math.floor(remainingSeconds / 60);
   const secs = remainingSeconds % 60;
 
-  timerDisplay.textContent = `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+  timerDisplay.textContent = `${String(mins).padStart(2, "0")}:${String(
+    secs,
+  ).padStart(2, "0")}`;
 
   updateTree();
 }
