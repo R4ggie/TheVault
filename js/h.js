@@ -25,14 +25,14 @@ const identities = {
     avatar: "/assets/DearDiary/noorhan.jpg", // صورتي
     color: "#4f8cff",
     type: "me",
-    profileLink: "Noorhanz.html",
+    profileLink: "html/Noorhanz.html",
   },
   RAGAD: {
     name: "Raghadz",
     avatar: "/assets/DearDiary/raghad.jpg", // صورة رغد
     color: "#ff7f96",
     type: "friend",
-    profileLink: "Raghadz.html",
+    profileLink: "html/Raghadz.html",
   },
   USER: {
     name: "مشاهد خارجي",
