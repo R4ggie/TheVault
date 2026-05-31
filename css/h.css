@@ -1,0 +1,417 @@
+/* ==========================================================================
+   1. التنسيقات العامة والـ Reset
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background: #FFF8F2;
+    min-height: 100vh;
+    color: #684A39;
+    overflow-x: hidden;
+}
+
+/* Navbar العلوي العام للموقع */
+
+nav {
+    display: flex;
+    padding: 20px;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.navCon{
+    display: flex;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    border: 2px solid #472f23;
+}
+
+.logoName{
+    color: #472f23;
+    font-family: Italianno;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.clickable{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 40px;
+}
+.clickable a{
+    color: #957453;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.clickable img{
+    max-width: 70px;
+    height: auto;
+}
+
+/* ==========================================================================
+   2. تقسيم الشاشة وتنسيق الـ Sidebar (مصلح ومنظم عمودياً)
+   ========================================================================== */
+.container {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 85px); 
+}
+
+.sidebar {
+    width: 280px;
+    min-width: 280px;
+    padding: 30px 20px;
+    border-left: 1px solid #E8D5C4;
+    background: #F8EDE3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-card img.clickable-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4f8cff;
+    transition: transform 0.2s ease;
+}
+
+.profile-card img.clickable-avatar:hover {
+    transform: scale(1.05);
+}
+
+.profile-card h2 {
+    margin-top: 12px;
+    font-size: 22px;
+}
+
+.profile-card p {
+    color: #7A9D54;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.new-post-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    background: #b29272;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.new-post-btn:hover {
+    background: #B85A68;
+}
+
+.user-selector-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.user-selector-container label {
+    color: #684A39;
+}
+
+.user-selector-container select {
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
+    background: #FFF8F2;
+    color: #684A39;
+    border: 1px solid #E8D5C4;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.create-post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.box-avatar {
+    width: 45px;
+    height: 45px;
+}
+
+#boxAuthorName {
+    font-weight: 600;
+    color: #4f8cff;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   3. محتوى التايم لاين والفلترة
+   ========================================================================== */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* سكشن الفلترة الفرعي داخل الـ Navbar */
+.navbar {
+    width: 100%;
+    height: 70px;
+    background: transparent;
+    border: 1px solid #E8D5C4;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.filters button {
+    border: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #F8EDE3;
+    color: #684A39;
+    font-size: 14px;
+    transition: .2s;
+}
+
+.filters button:hover {
+    background: #F1DFD1;
+}
+
+.filters button.active {
+    background: #b29272;
+    color: white;
+}
+
+/* ساحة وعاء المنشورات الأساسية */
+.feed-section {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+/* وعاء التايم لاين الذي يحتوي على المنشورات */
+.feed {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+/* صندوق إنشاء منشور */
+.create-post {
+    background: white;
+    border: 1px solid #F1DFD1;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 85%;
+}
+
+.create-post textarea {
+    resize: none;
+    min-height: 100px;
+    border: 1px solid #F1DFD1;
+    outline: none;
+    border-radius: 15px;
+    padding: 15px;
+    background: #FFF8F2;
+    color: #684A39;
+    font-size: 15px;
+}
+
+.create-post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.create-post-actions input[type="file"] {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.create-post button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 12px;
+    background: #b29272;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================================================
+   4. الهيكل الذكي المصلح للمنشور (ممنوع من الانكماش ومحمي العرض)
+   ========================================================================== */
+.post {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    width: 85%;
+    flex-shrink: 0;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #F1DFD1;
+    box-shadow: 0 6px 20px rgba(104, 74, 57, 0.08);
+    animation: fadeIn .3s ease-in-out;
+}
+
+/* 1- مناشير رغد (تطير لليمين، صورتها يمين، كلامها يسار) */
+.post.friend {
+    margin-left: auto !important;   /* تأمين الالتصاق التام باليمين */
+    margin-right: 0 !important;
+    direction: rtl;                 /* ترتيب القراءة العربي الطبيعي للأفاتار والنص */
+    border-right: 4px solid #ff7f96; /* تمييز كرتها بالوردي الملكي */
+    border-left: none;
+}
+
+/* 2- مناشيرك نور هان (تطير لليسار، صورتك يسار، كلامك يمين) */
+.post.me {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    direction: ltr;
+    border-left: 4px solid #7fb6ff;
+    border-right: none;
+    background: #FFF7F8;
+}
+
+/* صندوق المحتوى الداخلي للمنشور */
+.content {
+    flex-grow: 1;
+    width: 100%;
+    height: auto; 
+    background: transparent !important;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* تأمين محاذاة النصوص العربية من اليمين داخل كلا الكرتين لجمال القراءة */
+.post.friend .content {
+    text-align: right; 
+}
+
+.post.me .content {
+    text-align: right; /* كلامكِ يبدأ من اليمين بانتظام مريح رغم يسارية الأفاتار */
+}
+
+.content h4 {
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.post.friend h4 {
+    color: #ff7f96;
+}
+
+.post.me h4 {
+    color: #7fb6ff;
+}
+.content p {
+    color: #684A39;
+}
+
+/* الصور المرفقة داخل المنشور */
+.post-image {
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: cover;
+    margin-top: 15px;
+    border-radius: 12px;
+    border: 1px solid #F1DFD1;
+}
+
+/* الأفاتار الشخصي بجانب المنشور */
+.avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0; 
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.08);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   5. التجاوب الذكي والمرن مع الموبايل
+   ========================================================================== */
+@media(max-width: 768px){
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+        border-left: none;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        padding: 20px;
+        align-items: center;
+    }
+    .navbar {
+        justify-content: center;
+        padding: 10px;
+        height: auto;
+    }
+    .filters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .post {
+        width: 100% !important;
+        min-width: 100% !important;
+        padding: 15px;
+    }
+    .create-post {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px;
+    }
+}
+
+

@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: "JetBrains Mono";
+    background: #ECEEE8;
+    color: #44414c;
+    margin: 20px;
+}
+
+nav {
+    margin: 10px auto 20px;
+    display: flex;
+    width: fit-content;
+    padding: 6px;
+    align-items: center;
+    gap: 40px;
+    border-bottom: 2px solid #6C738A;
+}
+
+.ico a img{
+    max-width: 60px;
+    height: auto;
+}
+
+.clickable{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 40px;
+}
+.clickable a{
+    color: #44414c;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+.container {
+    display: flex;
+    gap: 20px;
+    margin: 10px 20px 20px;
+}
+
+.left-panel {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background: #DBDDD8;
+    padding: 32px;
+    gap: 20px;
+}
+
+.timer-section {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #004434;
+}
+
+.titleH h4{
+    font-family: Italianno;
+    font-size: 40px;
+    color: #44414c6a;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #00443489;
+    color: white;
+    font-size: 1rem;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.tree-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.tree-section img {
+    width: 100%;
+    max-width: 400px;
+    max-height: 100%;
+    height: auto;
+}
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.settings-card,
+.tasks-card {
+        background: #00000012;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.tasks-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-card h2,
+.tasks-card h2 {
+    margin-bottom: 15px;
+}
+
+.settings-card label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.settings-card input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #EDEFEA;
+    border-radius: 999px;
+    padding: 14px 18px;
+    width: 100%;
+}
+
+.task-input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input-row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: #eceee8;
+    border-radius: 999px;
+    padding: 14px 18px;
+    width: 100%;
+}
+
+#taskList {
+    list-style: none;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #EBEEE7;
+    border-radius: 10px;
+}
+
+.task-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #EAEEE7;
+    border: #44414c6e solid 1px;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked {
+    background: #44414cab;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.delete-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    padding: 0;
+    background: #CE6C7A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#addTaskBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    #timer {
+        font-size: 4rem;
+    }
+
+    .tree-section img {
+        max-width: 300px;
+    }
+
+}

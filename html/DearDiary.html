@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dear Diary</title>
+    <link rel="icon" type="image/x-icon" href="../assets/Ico/icon.png" />
+    <link rel="stylesheet" href="../css/h.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Itim&family=Niconne&family=Rochester&family=JetBrains+Mono:wght@100..800&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <div class="navCon">
+        <div class="clickable">
+          <a href="DearDiary.html"
+            ><img src="/assets/Ico/icon.png" alt="Logo"
+          /></a>
+          <a href="Pomodoro.html">Pomodoro</a>
+          <a href="Raghadz.html">Abt.Raghad</a>
+          <a href="Noorhanz.html">Abt. Noorhan</a>
+          <a href="DearDiary.html">Dear Diary</a>
+        </div>
+        <div class="logoName">TheVault</div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="sidebar">
+        <div class="profile-card">
+          <img
+            class="clickable-avatar"
+            id="sidebarAvatar"
+            src="/assets/DearDiary/noorhan.jpg"
+            alt="User Avatar" />
+          <h2 id="sidebarName">Noorhanz</h2>
+          <p>متصلة الآن</p>
+        </div>
+
+        <button class="new-post-btn" id="togglePostBtn">+ إضافة منشور</button>
+
+        <div class="user-selector-container">
+          <label for="currentUser">من أنت؟</label>
+          <select id="currentUser">
+            <option value="USER">USER</option>
+            <option value="NOORHAN" selected>NOORHAN</option>
+            <option value="RAGAD">RAGHAD</option>
+          </select>
+        </div>
+      </div>
+
+      <main class="main-content">
+        <nav class="navbar">
+          <div class="filters">
+            <button class="active" data-filter="all">ALL</button>
+            <button data-filter="me">Posts By Noorhan</button>
+            <button data-filter="friend">Posts By Raghad</button>
+          </div>
+        </nav>
+
+        <section class="feed-section">
+          <div class="create-post hidden" id="createPost">
+            <div class="create-post-header">
+              <img
+                id="boxAvatar"
+                class="avatar box-avatar"
+                src="/assets/DearDiary/noorhan.jpg"
+                alt="Avatar" />
+              <span id="boxAuthorName">Noorhanz</span>
+            </div>
+
+            <textarea
+              id="postText"
+              placeholder="اكتبِ منشوراً جديداً..."></textarea>
+
+            <div class="create-post-actions">
+              <input type="file" id="postImage" accept="image/*" />
+              <button id="publishBtn">نشر</button>
+            </div>
+          </div>
+
+          <div id="feed" class="feed">
+            <div class="post friend" data-time="1">
+              <a href="Raghadz.html">
+                <img
+                  class="avatar"
+                  src="/assets/DearDiary/raghad.jpg"
+                  alt="Raghad" />
+              </a>
+              <div class="content">
+                <h4>Raghadz</h4>
+                <p>بدأنا اليوم تصميم الموقع ✨</p>
+              </div>
+            </div>
+
+            <div class="post me" data-time="2">
+              <a href="Noorhanz.html">
+                <img
+                  class="avatar"
+                  src="/assets/DearDiary/noorhan.jpg"
+                  alt="Me" />
+              </a>
+              <div class="content">
+                <h4>Noorhanz</h4>
+                <p>خلصت الصفحة الرئيسية 🎉</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../js/h.js"></script>
+  </body>
+</html>

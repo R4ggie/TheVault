@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Tree</title>
+    <link rel="icon" type="image/x-icon" href="/assets/Ico/icon.png" />
+    <link rel="stylesheet" href="/css/pomodoro.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Itim&family=Niconne&family=Rochester&family=JetBrains+Mono:wght@100..800&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <div class="ico">
+        <a href="DearDiary.html"
+          ><img src="/assets/Ico/icon.png" alt="Logo"
+        /></a>
+      </div>
+
+      <div class="clickable">
+        <a href="DearDiary.html">Dear Diary</a>
+        <a href="Noorhanz.html">Abt. Noorhan</a>
+        <a href="Raghadz.html">Abt.Raghad</a>
+        <a href="Pomodoro.html">Pomodoro</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="left-panel">
+        <div class="timer-section">
+          <div class="titleH">
+            <h4>Watch your progress grow</h4>
+          </div>
+          <h1 id="timer">25:00</h1>
+
+          <div class="buttons">
+            <button id="toggleBtn">Start</button>
+            <button id="resetBtn">Reset</button>
+          </div>
+        </div>
+
+        <div class="tree-section">
+          <img
+            id="treeImage"
+            src="/assets/Pomodoro/tree-1.png"
+            alt="Growing Tree" />
+        </div>
+      </div>
+
+      <div class="right-panel">
+        <div class="settings-card">
+          <h2>Timer Settings</h2>
+
+          <label> Duration (minutes) </label>
+
+          <input type="number" id="durationInput" min="1" max="60" value="25" />
+        </div>
+
+        <div class="tasks-card">
+          <h2>Tasks</h2>
+
+          <div class="task-input-row">
+            <input type="text" id="taskInput" placeholder="Add task..." />
+
+            <button id="addTaskBtn">+</button>
+          </div>
+
+          <ul id="taskList"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/pomodoro.js"></script>
+  </body>
+</html>
