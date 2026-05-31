@@ -93,7 +93,8 @@ nav {
     margin-bottom: 4vh;
 }
 
-.welcome-bar h1 , h2{
+.welcome-bar h1,
+.welcome-bar h2 {
     font-family: 'Cinzel Decorative', serif;
     color: #FBF9F6;
     font-size: clamp(1.4rem, 2.5vw, 2.2rem); 
