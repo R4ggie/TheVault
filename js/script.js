@@ -209,7 +209,7 @@ if (carouselImages.length > 0) {
 
 // ================= Hover sound for book cards (click sound) =================
 (() => {
-  const bookSound = new Audio("/assets/Raghad/click.mp3");
+  const bookSound = new Audio("../assets/Raghad/click.mp3");
   bookSound.preload = "auto";
 
   const bookCards = document.querySelectorAll(".sec-3 .cards-container .card");
