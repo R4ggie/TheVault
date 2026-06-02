@@ -150,6 +150,11 @@ nav {
     background-color: #F5C2D6;
 }
 
+.sec-2 img{
+    max-width: 700px;
+    height: auto;
+}
+
 .sec-2 img {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -371,6 +376,97 @@ nav {
 }
 
 @media (max-width: 860px) {
+    .navCon {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .clickable {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .intro {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .topSec h4 {
+        font-size: 28px;
+    }
+
+    .topSec h1 {
+        font-size: clamp(40px, 8vw, 60px);
+    }
+
+    .sec-2 {
+        padding: 40px 20px;
+    }
+
+    .sec-2 p {
+        font-size: clamp(28px, 6vw, 40px);
+    }
+
+    .sec-2 img {
+        max-width: 400px;
+    }
+
+    .sec-2_2 {
+        padding: 40px 20px;
+    }
+
+    .sec-2_2 h1 {
+        font-size: clamp(50px, 10vw, 80px);
+    }
+
+    .sec-2_2 p {
+        font-size: clamp(16px, 2.5vw, 20px);
+    }
+
+    .divider {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .divider .vinyl {
+        left: 0;
+        width: min(280px, 80%);
+    }
+
+    .divider .list {
+        padding-right: 0;
+    }
+
+    .divider .list h1 {
+        font-size: clamp(40px, 8vw, 60px);
+    }
+
+    .divider .list .card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .divider .list .card .gap img {
+        max-width: 120px;
+    }
+
+    .divider .vinyl {
+        display: none;
+    }
+
+    .sec-4 {
+        padding: 40px 20px;
+    }
+
+    .sec-4 .card-cont .card {
+        width: 100%;
+        max-width: 280px;
+    }
+
     .carousel-container {
         flex-direction: column;
     }
@@ -379,6 +475,41 @@ nav {
         width: 48px;
         height: 48px;
         font-size: 26px;
+    }
+
+    .sec-2 img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sec-2_2 p {
+        font-size: clamp(14px, 3vw, 18px);
+    }
+
+    .sec-2_2 .date {
+        font-size: 20px;
+    }
+
+    .sec-carousel {
+        padding: 60px 20px;
+    }
+
+    .sec-carousel h1 {
+        font-size: clamp(28px, 7vw, 44px);
+    }
+
+    .carousel-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .carousel-arrow {
+        font-size: 38px;
+    }
+
+    .divider .list .card {
+        font-size: 18px;
     }
 }
 

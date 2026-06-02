@@ -382,6 +382,24 @@ nav {
    5. التجاوب الذكي والمرن مع الموبايل
    ========================================================================== */
 @media(max-width: 768px){
+    nav {
+        justify-content: center;
+        padding: 10px 10px 0;
+    }
+    .navCon {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    .clickable {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    .logoName {
+        width: 100%;
+        text-align: center;
+    }
     .container {
         flex-direction: column;
     }
